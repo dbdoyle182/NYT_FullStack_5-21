@@ -1,0 +1,23 @@
+container {
+    width: 960px;
+  }
+  
+  h1 {
+    text-align: center;
+    background-color: #888888;
+  }
+  
+  h2 {
+    background-color: #555555;
+    color: white;
+  }
+  
+  #searchPara {
+    border: 2px solid;
+    border-color: #999999;
+  }
+  
+  #topArticles {
+    border: 2px solid;
+    border-color: #999999;
+  }
