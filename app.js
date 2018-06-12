@@ -1,11 +1,11 @@
 // Var query
+var apiKey = "api-key=8de9135e72bd4a4ca79255deee6b17bf"
+var queryUrl = "https://api.nytimes.com/svc/search/v2/articlesearch.json?" + apiKey + "&q=";
 
-var queryUrl = "https://api.nytimes.com/svc/search/v2/articlesearch.json?" + apiKey + "&q="
-var apiKey = "api-key=8de9135e72bd4a4ca79255deee6b17bf&q"
 var searchTerm;
 
-$("#searchBtn").click(function(event) {
-    
+$("#submitBtn").click(function(event) {
+    console.log(queryUrl)
     event.preventDefault();
 
     searchTerm = $("#searchTerm").val().trim();
@@ -15,10 +15,10 @@ $("#searchBtn").click(function(event) {
     queryUrl += searchTerm;
 
     $.ajax({
-        url: queryURL,
+        url: queryUrl,
         method: "GET"
       }).then(function(response) {
-        console.log(response);
+        console.log(response.response);
       })
 
      
